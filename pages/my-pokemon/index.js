@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import styled from '@emotion/styled';
 
 import PokemonListItem from '../../components/PokemonListItem';
@@ -20,6 +21,16 @@ const PageWrapper = styled.div({
 
 const StyledListWrapper = styled(ListWrapper)({
   alignSelf: 'stretch'
+})
+
+const EmptyWrapper = LoadingWrapper.withComponent('p');
+
+const LinkInWrapper = styled.span({
+  color: 'black',
+  cursor: 'pointer',
+  '&:hover': {
+    textDecoration: 'underline'
+  }
 })
 
 const MyPokemonsPage = () => {
@@ -47,23 +58,38 @@ const MyPokemonsPage = () => {
 
         setPokemonInfo(pokemonInfo);
         setLoading(false);
+      } else {
+        setLoading(false);
       }
     }
 
     loadMyPokemonInfo();
   }, [caughtPokemons])
 
-  const pageContent = loading ? (
-    <LoadingWrapper>Loading your pokemon collection...</LoadingWrapper>
-  ) : (
-    <StyledListWrapper>
-      {caughtPokemons && Object.keys(caughtPokemons).map((nickname) => {
-        const originalName = caughtPokemons[nickname];
-        const { id, sprites = {} } = pokemonInfo[originalName] || {};
-        return (<PokemonListItem key={id} name={nickname} detailUrl={`/my-pokemon/${nickname}`} image={sprites.front_default} />);
-      })}
-    </StyledListWrapper>
-  )
+  let pageContent;
+  if (loading) {
+    pageContent = <LoadingWrapper empty>Loading your pokemon collection...</LoadingWrapper>
+  } else if (caughtPokemons && Object.keys(caughtPokemons).length > 0) {
+    pageContent = (
+      <StyledListWrapper>
+        {Object.keys(caughtPokemons).map((nickname) => {
+          const originalName = caughtPokemons[nickname];
+          const { id, sprites = {} } = pokemonInfo[originalName] || {};
+          return (<PokemonListItem key={id} name={nickname} detailUrl={`/my-pokemon/${nickname}`} image={sprites.front_default} />);
+        })}
+      </StyledListWrapper>
+    )
+  } else {
+    pageContent = (
+      <>
+        <EmptyWrapper empty>
+          You haven&apos;t caught any Pokemons yet.&nbsp;
+          <Link href="/pokemons"><LinkInWrapper>Go to all Pokemon list</LinkInWrapper></Link>
+          &nbsp;and catch some of them!
+        </EmptyWrapper>
+      </>
+    )
+  }
 
   return (
     <PageWrapper>

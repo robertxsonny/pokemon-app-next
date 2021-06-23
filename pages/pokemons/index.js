@@ -59,10 +59,14 @@ const PokemonsPage = () => {
         <meta property="og:title" content="Pokemon List" key="title" />
       </Head>
       <Header title="Pokemon List" />
-      <StyledListWrapper>
-        {pokemons.map(({ id, name, image }) => (<PokemonListItem key={id} detailUrl={`/pokemons/${name}`} name={name} image={image} />))}
-      </StyledListWrapper>
-      {loading && <LoadingWrapper>Loading pokemons...</LoadingWrapper>}
+      {(pokemons.length > 0) && (
+        <StyledListWrapper>
+          {pokemons.map(
+            ({ id, name, image }) => (<PokemonListItem key={id} detailUrl={`/pokemons/${name}`} name={name} image={image} />)
+          )}
+        </StyledListWrapper>
+      )}
+      {loading && <LoadingWrapper empty={(pokemons.length === 0)}>Loading pokemons...</LoadingWrapper>}
       {(!loading && pokemons.length < count) && <LoadMoreButton onClick={loadPokemon}>Load More</LoadMoreButton>}
     </PageWrapper>
   )

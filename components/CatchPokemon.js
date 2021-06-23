@@ -51,27 +51,23 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
   const [caught, setCaught] = useState(false);
 
   useEffect(() => {
-    const initNickname = () => {
-      if (!hasPokemonWithNickname(name)) {
-        setNickname(name);
-      } else {
-        let lastNum = 1;
-        while (hasPokemonWithNickname(`${name}${lastNum}`)) {
-          lastNum = lastNum + 1;
-        }
-        setNickname(`${name}${lastNum}`)
-      }
-    }
-  
     if (open && canCatch === null) {
       setCaught(false);
       setTimeout(() => {
         const success = Math.random() < 0.5;
-        if (success) {
-          initNickname();
-        }
         setCanCatch(success);
-      }, 3000)
+        if (success) {
+          if (!hasPokemonWithNickname(name)) {
+            setNickname(name);
+          } else {
+            let lastNum = 1;
+            while (hasPokemonWithNickname(`${name}${lastNum}`)) {
+              lastNum = lastNum + 1;
+            }
+            setNickname(`${name}${lastNum}`)
+          }
+        }
+      }, 2000)
     } else if (!open) {
       setCanCatch(null);
     }

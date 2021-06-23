@@ -89,7 +89,7 @@ const MyPokemonDetailPage = ({ }) => {
   const { name, sprites = {}, types = [], moves = [], height, weight } = pokemon || {};
 
   const pageContent = loading ? (
-    <LoadingWrapper>Loading your pokemon...</LoadingWrapper>
+    <LoadingWrapper empty>Loading your pokemon...</LoadingWrapper>
   ) : (
     <>
       <section>

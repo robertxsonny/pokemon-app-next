@@ -10,17 +10,20 @@ export const Emoji = styled.span({
   marginBottom: 16
 })
 
-export const LoadingWrapper = styled.section({
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  textAlign: 'center',
-  justifyContent: 'center',
-  padding: '12px 0',
-  fontWeight: 500,
-  color: 'dimgray',
-  fontSize: 16
-})
+export const LoadingWrapper = styled.section(
+  {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
+    padding: '12px 0',
+    fontWeight: 500,
+    color: 'dimgray',
+    fontSize: 16
+  },
+  ({ empty }) => ({ padding: empty ? '36px 0' : '12px 0' })
+)
 
 export const ListWrapper = styled.div({
   display: 'grid',
