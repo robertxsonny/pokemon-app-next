@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
@@ -13,6 +13,21 @@ const SecondaryTextButton = styled(TextButton)({
 })
 
 const SecondaryLinkButton = SecondaryTextButton.withComponent('a')
+
+const DangerTextButton = styled(TextButton)({
+  color: 'red',
+  marginTop: 12
+})
+
+const DangerCtaButton = styled(SmallCtaButton)({
+  backgroundColor: 'red',
+  '&:hover:not([disabled])': {
+    backgroundColor: 'firebrick'
+  },
+  '&:active:not([disabled])': {
+    backgroundColor: 'darkred'
+  }
+})
 
 const TextInput = styled.input({
   marginBottom: 16,
@@ -36,6 +51,18 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
   const [caught, setCaught] = useState(false);
 
   useEffect(() => {
+    const initNickname = () => {
+      if (!hasPokemonWithNickname(name)) {
+        setNickname(name);
+      } else {
+        let lastNum = 1;
+        while (hasPokemonWithNickname(`${name}${lastNum}`)) {
+          lastNum = lastNum + 1;
+        }
+        setNickname(`${name}${lastNum}`)
+      }
+    }
+  
     if (open && canCatch === null) {
       setCaught(false);
       setTimeout(() => {
@@ -48,19 +75,7 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
     } else if (!open) {
       setCanCatch(null);
     }
-  }, [open, canCatch])
-
-  const initNickname = useCallback(() => {
-    if (!hasPokemonWithNickname(name)) {
-      setNickname(name);
-    } else {
-      let lastNum = 1;
-      while (hasPokemonWithNickname(`${name}${lastNum}`)) {
-        lastNum = lastNum + 1;
-      }
-      setNickname(`${name}${lastNum}`)
-    }
-  }, [hasPokemonWithNickname, name, setNickname])
+  }, [open, canCatch, hasPokemonWithNickname])
 
   const onNicknameChange = (event) => {
     const { value } = event.target;
@@ -102,8 +117,8 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
   if (canCatch === false) {
     return (
       <Modal open={open} title={<>Oops, failed to catch {nameWihSentenceCase}!</>} emoji="😞">
-        <SmallCtaButton onClick={() => setCanCatch(null)}>Try again</SmallCtaButton>
-        <SecondaryTextButton onClick={onClose}>Go back</SecondaryTextButton>
+        <DangerCtaButton onClick={() => setCanCatch(null)}>Try again</DangerCtaButton>
+        <DangerTextButton onClick={onClose}>Go back</DangerTextButton>
       </Modal>
     )
   }

@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import { sm } from '../styles/breakpoints';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { md, sm } from '../styles/breakpoints';
 
 const HeaderWrapper = styled.header(
   {
@@ -26,12 +28,81 @@ const HeaderContainer = styled.div({
   fontSize: 20
 })
 
-const Header = ({ title, hideOnSm }) => (
-  <HeaderWrapper hideOnSm={hideOnSm}>
-    <HeaderContainer>
-      {title}
-    </HeaderContainer>
-  </HeaderWrapper>
-)
+const LargeOnlyHeaderContainer = styled(HeaderContainer)({
+  [sm.max]: {
+    display: 'none'
+  },
+  [md.min]: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  }
+})
+
+const SmallOnlyHeaderContainer = styled(HeaderContainer)({
+  [md.min]: {
+    display: 'none'
+  }
+})
+
+const LargeOnlyTitle = styled.div({
+  'h1': {
+    marginBottom: 0,
+    fontSize: 24,
+    textAlign: 'left',
+  },
+  [sm.max]: {
+    display: 'none'
+  }
+})
+
+const HomeLink = styled.span({
+  textDecoration: 'none',
+  cursor: 'pointer',
+  '&:hover': {
+    textDecoration: 'underline'
+  }
+})
+
+const RightLinkWrapper = styled.div({ display: 'flex' });
+
+const MenuLink = styled(HomeLink)(
+  { fontSize: 14, marginLeft: 12 },
+  ({ current }) => (current ? {
+    cursor: 'default',
+    fontWeight: 500,
+    '&:hover': {
+      textDecoration: 'none'
+    }
+  } : {})
+);
+
+const Header = ({ title, hideOnSm }) => {
+  const router = useRouter();
+
+  const { pathname } = router;
+
+  const renderRightMenu = (path, title) => {
+    return pathname === path ? <MenuLink current>{title}</MenuLink> : <Link href={path}><MenuLink>{title}</MenuLink></Link>
+  }
+
+  return (
+    <>
+      <HeaderWrapper hideOnSm={hideOnSm}>
+        <LargeOnlyHeaderContainer>
+          <Link href="/">
+            <HomeLink>Pokemon List App</HomeLink>
+          </Link>
+          <RightLinkWrapper>
+            {renderRightMenu('/pokemons', 'All Pokemons')}
+            {renderRightMenu('/my-pokemon', 'My collections')}
+          </RightLinkWrapper>
+        </LargeOnlyHeaderContainer>
+        {!hideOnSm && <SmallOnlyHeaderContainer>{title}</SmallOnlyHeaderContainer>}
+      </HeaderWrapper>
+      {!hideOnSm && <LargeOnlyTitle><h1>{title}</h1></LargeOnlyTitle>}
+    </>
+  )
+}
 
 export default Header;
