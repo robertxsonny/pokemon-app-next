@@ -80,7 +80,7 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
   if (caught) {
     return (
       <Modal open={open} title={<><SentenceCase>{nickname}</SentenceCase> has been added to your collection</>} emoji="✅">
-        <Link href="/my-pokemon">
+        <Link href="/my-pokemon" passHref>
           <SecondaryLinkButton>View my collection</SecondaryLinkButton>
         </Link>
         <SecondaryTextButton onClick={onClose}>Go back</SecondaryTextButton>

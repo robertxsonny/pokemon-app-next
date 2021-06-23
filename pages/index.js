@@ -66,13 +66,13 @@ export default function Home() {
       </Head>
       <h1>Welcome to Pokemon List!</h1>
       <CardWrapper>
-        <Link href="/pokemons">
+        <Link href="/pokemons" passHref>
           <CardMenu>
             <BigEmoji role="img" area-label="pokemons">📜</BigEmoji>
             All Pokemons
           </CardMenu>
         </Link>
-        <Link href="/my-pokemon">
+        <Link href="/my-pokemon" passHref>
           <CardMenu>
             <BigEmoji role="img" area-label="pokemons">💼</BigEmoji>
             My collections

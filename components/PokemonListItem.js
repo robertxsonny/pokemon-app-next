@@ -48,13 +48,10 @@ const Card = styled.a({
   }
 })
 
-const PokemonListItem = ({ name, image, detailUrl, onDelete }) => (
-  <Link href={detailUrl}>
+const PokemonListItem = ({ name, image, detailUrl }) => (
+  <Link href={detailUrl} passHref>
     <Card>
-      {onDelete && (
-        <button onClick={onDelete}>x</button>
-      )}
-      {image && <Image src={image} layout="fill" objectFit="contain" />}
+      {image && <Image src={image} alt={name} layout="fill" objectFit="contain" />}
       <TextWrapper>
         <Name>{name}</Name>
       </TextWrapper>

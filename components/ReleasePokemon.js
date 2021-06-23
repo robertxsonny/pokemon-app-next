@@ -44,7 +44,7 @@ const ReleasePokemon = ({ open, nickname, onClose }) => {
   if (released) {
     return (
       <Modal open={open} title={<>{nameWihSentenceCase} has been released</>} emoji="🕊️">
-        <Link href="/my-pokemon">
+        <Link href="/my-pokemon" passHref>
           <DangerLinkButton>Go back to my collection</DangerLinkButton>
         </Link>
       </Modal>
