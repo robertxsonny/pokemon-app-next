@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
@@ -50,7 +50,7 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
     }
   }, [open, canCatch])
 
-  const initNickname = () => {
+  const initNickname = useCallback(() => {
     if (!hasPokemonWithNickname(name)) {
       setNickname(name);
     } else {
@@ -60,7 +60,7 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
       }
       setNickname(`${name}${lastNum}`)
     }
-  }
+  }, [hasPokemonWithNickname, name, setNickname])
 
   const onNicknameChange = (event) => {
     const { value } = event.target;

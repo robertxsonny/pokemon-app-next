@@ -71,7 +71,7 @@ const PokemonDetailPage = ({ pokemon }) => {
       <Header title="Pokemon List" hideOnSm />
       <section>
         <DetailImageWrapper>
-          <Image src={sprites.front_default} layout="fill" objectFit="contain" />
+          <Image src={sprites.front_default} alt={name} layout="fill" objectFit="contain" />
         </DetailImageWrapper>
         <CatchButtonWrapper>
           <CtaButton onClick={() => setCatching(true)}>Catch</CtaButton>

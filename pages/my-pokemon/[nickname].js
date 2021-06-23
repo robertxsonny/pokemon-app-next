@@ -72,16 +72,19 @@ const MyPokemonDetailPage = ({ }) => {
         setLoading(false);
 
       } catch (e) {
-        router.replace('/404');
+        setPokemon(null);
       }
     }
 
     if (nickname) {
       loadPokemonInfo();
-    } else {
-      router.replace('/404');
     }
-  }, [nickname])
+  }, [nickname, getPokemonName])
+
+  if (!pokemon) {
+    router.replace('/404');
+    return null;
+  }
 
   const { name, sprites = {}, types = [], moves = [], height, weight } = pokemon || {};
 
@@ -91,7 +94,7 @@ const MyPokemonDetailPage = ({ }) => {
     <>
       <section>
         <DetailImageWrapper>
-          <Image src={sprites.front_default} layout="fill" objectFit="contain" />
+          <Image src={sprites.front_default} alt={nickname} layout="fill" objectFit="contain" />
         </DetailImageWrapper>
         <ReleaseButtonWrapper>
           <ReleaseButton onClick={() => setReleasing(true)}>Release from collection</ReleaseButton>

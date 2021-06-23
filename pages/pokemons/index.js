@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import styled from '@emotion/styled';
 
@@ -32,17 +32,21 @@ const PokemonsPage = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const loadPokemon = async () => {
-    setLoading(true);
-    const { data } = await client.query({ query: getPokemonListQuery, variables: { limit: 12, offset } });
-    if (data && data.pokemons) {
-      const { count: newCount, nextOffset, results } = data.pokemons;
-      setCount(newCount);
-      setOffset(nextOffset);
-      setPokemons([...pokemons, ...results]);
+  const loadPokemon = useCallback(() => {
+    const getPokemonByName = async () => {
+      setLoading(true);
+      const { data } = await client.query({ query: getPokemonListQuery, variables: { limit: 12, offset } });
+      if (data && data.pokemons) {
+        const { count: newCount, nextOffset, results } = data.pokemons;
+        setCount(newCount);
+        setOffset(nextOffset);
+        setPokemons([...pokemons, ...results]);
+      }
+      setLoading(false);
     }
-    setLoading(false);
-  }
+
+    getPokemonByName();
+  }, [offset, pokemons, setLoading])
 
   useEffect(() => {
     loadPokemon();
