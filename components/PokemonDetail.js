@@ -108,13 +108,13 @@ const PokemonDetail = ({ name, nickname, types, moves, height, weight, numOfColl
       {height && (
         <SmallCard>
           <h3>{height}</h3>
-          Height
+          Height (in)
         </SmallCard>
       )}
       {weight && (
         <SmallCard>
           <h3>{weight}</h3>
-          Weight
+          Weight (lbs)
         </SmallCard>
       )}
       {Number.isInteger(numOfCollected) && (

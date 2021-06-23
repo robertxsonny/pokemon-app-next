@@ -84,7 +84,7 @@ const MyPokemonsPage = () => {
       <>
         <EmptyWrapper empty>
           You haven&apos;t caught any Pokemons yet.&nbsp;
-          <Link href="/pokemons"><LinkInWrapper>Go to all Pokemon list</LinkInWrapper></Link>
+          <Link href="/pokemons" passHref><LinkInWrapper>Go to all Pokemon list</LinkInWrapper></Link>
           &nbsp;and catch some of them!
         </EmptyWrapper>
       </>

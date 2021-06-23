@@ -83,14 +83,14 @@ const Header = ({ title, hideOnSm }) => {
   const { pathname } = router;
 
   const renderRightMenu = (path, title) => {
-    return pathname === path ? <MenuLink current>{title}</MenuLink> : <Link href={path}><MenuLink>{title}</MenuLink></Link>
+    return pathname === path ? <MenuLink current>{title}</MenuLink> : <Link href={path} passHref><MenuLink>{title}</MenuLink></Link>
   }
 
   return (
     <>
       <HeaderWrapper hideOnSm={hideOnSm}>
         <LargeOnlyHeaderContainer>
-          <Link href="/">
+          <Link href="/" passHref>
             <HomeLink>Pokemon List App</HomeLink>
           </Link>
           <RightLinkWrapper>

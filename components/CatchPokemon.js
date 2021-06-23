@@ -71,7 +71,8 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
     } else if (!open) {
       setCanCatch(null);
     }
-  }, [open, canCatch, hasPokemonWithNickname])
+  }, [open, canCatch, name, hasPokemonWithNickname])
+
 
   const onNicknameChange = (event) => {
     const { value } = event.target;

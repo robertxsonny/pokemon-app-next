@@ -48,9 +48,7 @@ const PokemonsPage = () => {
     getPokemonByName();
   }, [offset, pokemons, setLoading])
 
-  useEffect(() => {
-    loadPokemon();
-  }, []);
+  useEffect(loadPokemon, []);
 
   return (
     <PageWrapper>
