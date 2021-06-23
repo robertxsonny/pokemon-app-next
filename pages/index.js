@@ -47,6 +47,8 @@ const CardMenu = styled.a({
   justifyContent: 'center',
   textAlign: 'center',
   transition: '0.3s all ease',
+  textDecoration: 'none',
+  color: 'black',
   '&:hover': {
     boxShadow: '0 8px 8px rgba(0, 0, 0, 0.034), 0 12px 12px rgba(0, 0, 0, 0.048)',
   },
