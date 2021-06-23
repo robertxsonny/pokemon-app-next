@@ -65,6 +65,7 @@ export default function Home() {
       <Head>
         <title>Welcome</title>
         <meta property="og:title" content="Welcome" key="title" />
+        <meta name="description" content="Pokemon list demo site" />
       </Head>
       <h1>Welcome to Pokemon List!</h1>
       <CardWrapper>

@@ -53,7 +53,6 @@ const PokemonsPage = () => {
       <Head>
         <title>Pokemon List</title>
         <meta property="og:title" content="Pokemon List" key="title" />
-        <meta name="description" content="Pokemon list demo site" />
       </Head>
       <Header title="Pokemon List" />
       <StyledListWrapper>
