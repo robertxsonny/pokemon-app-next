@@ -21,6 +21,8 @@ export const useMyPokemons = () => {
 
   const getPokemonName = useCallback((nickname) => caughtPokemons[nickname], [caughtPokemons]);
 
+  const getNumOfCollected = useCallback((name) => Object.values(caughtPokemons).filter(v => v === name).length, [caughtPokemons]);
+
   const catchPokemon = useCallback((name, nickname) => {
     if (!caughtPokemons[nickname]) {
       const newCaughtPokemons = {
@@ -40,5 +42,5 @@ export const useMyPokemons = () => {
     setCaughtPokemons(newCaughtPokemons);
   }, [caughtPokemons]);
 
-  return { caughtPokemons, hasPokemonWithNickname, getPokemonName, catchPokemon, releasePokemon };
+  return { caughtPokemons, hasPokemonWithNickname, getNumOfCollected, getPokemonName, catchPokemon, releasePokemon };
 }

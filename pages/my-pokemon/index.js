@@ -1,14 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import styled from '@emotion/styled';
+
+import PokemonListItem from '../../components/PokemonListItem';
+import Header from '../../components/Header';
+import { ListWrapper, LoadingWrapper } from '../../styles/shared';
 
 import { getPokemonByNameQuery } from '../../graphql/pokemon';
-import PokemonListItem from '../../components/PokemonListItem';
 import { useMyPokemons } from '../../hooks/my-pokemon';
 import client from '../../apollo-client';
+
+const PageWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  paddingTop: 64,
+  paddingBottom: 64
+})
+
+const StyledListWrapper = styled(ListWrapper)({
+  alignSelf: 'stretch'
+})
 
 const MyPokemonsPage = () => {
   const { caughtPokemons } = useMyPokemons();
   const [pokemonInfo, setPokemonInfo] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadMyPokemonInfo = async () => {
@@ -36,15 +53,28 @@ const MyPokemonsPage = () => {
     loadMyPokemonInfo();
   }, [caughtPokemons])
 
-  return (
-    <div>
-      {loading && <span>Loading my pokemons...</span>}
-      {!loading && caughtPokemons && Object.keys(caughtPokemons).map((nickname) => {
+  const pageContent = loading ? (
+    <LoadingWrapper>Loading your pokemon collection...</LoadingWrapper>
+  ) : (
+    <StyledListWrapper>
+      {caughtPokemons && Object.keys(caughtPokemons).map((nickname) => {
         const originalName = caughtPokemons[nickname];
         const { id, sprites = {} } = pokemonInfo[originalName] || {};
         return (<PokemonListItem key={id} name={nickname} detailUrl={`/my-pokemon/${nickname}`} image={sprites.front_default} />);
       })}
-    </div>
+    </StyledListWrapper>
+  )
+
+  return (
+    <PageWrapper>
+      <Head>
+        <title>My Pokemon Collection</title>
+        <meta property="og:title" content="My Pokemon Collection" key="title" />
+      </Head>
+      <Header title="My Pokemon Collection" />
+      {pageContent}
+    </PageWrapper>
+
   )
 }
 

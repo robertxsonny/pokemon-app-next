@@ -1,42 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { useLazyQuery } from '@apollo/client';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import styled from '@emotion/styled';
+
+import PokemonListItem from '../../components/PokemonListItem';
+import Header from '../../components/Header';
+import { LoadingWrapper, ListWrapper, TextButton } from '../../styles/shared';
 
 import { getPokemonListQuery } from '../../graphql/pokemon';
-import PokemonListItem from '../../components/PokemonListItem';
-import Modal from '../../components/Modal';
+import client from '../../apollo-client';
+
+const PageWrapper = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  paddingTop: 64,
+  paddingBottom: 64
+})
+
+const StyledListWrapper = styled(ListWrapper)({
+  alignSelf: 'stretch'
+})
+
+const LoadMoreButton = styled(TextButton)({
+  color: 'green',
+  fontSize: 14
+})
 
 const PokemonsPage = () => {
   const [count, setCount] = useState(0);
   const [offset, setOffset] = useState(null);
   const [pokemons, setPokemons] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const [getPokemons, { loading }] = useLazyQuery(
-    getPokemonListQuery,
-    {
-      onCompleted: (data) => {
-        if (data && data.pokemons) {
-          const { count: newCount, nextOffset, results } = data.pokemons;
-          setCount(newCount);
-          setOffset(nextOffset);
-          setPokemons([...pokemons, ...results]);
-        }
-      }
+  const loadPokemon = async () => {
+    setLoading(true);
+    const { data } = await client.query({ query: getPokemonListQuery, variables: { limit: 12, offset } });
+    if (data && data.pokemons) {
+      const { count: newCount, nextOffset, results } = data.pokemons;
+      setCount(newCount);
+      setOffset(nextOffset);
+      setPokemons([...pokemons, ...results]);
     }
-  );
-
-  const loadPokemon = () => getPokemons({ variables: { limit: 20, offset } });
+    setLoading(false);
+  }
 
   useEffect(() => {
     loadPokemon();
   }, []);
 
   return (
-    <div>
-      {pokemons.map(({ id, name, image }) => (<PokemonListItem key={id} detailUrl={`/pokemons/${name}`} name={name} image={image} />))}
-      {loading && <span>Loading pokemons...</span>}
-      {(!loading && pokemons.length < count) && <button onClick={loadPokemon}>Load More</button>}
-      {/* <Modal /> */}
-    </div>
+    <PageWrapper>
+      <Head>
+        <title>Pokemon List</title>
+        <meta property="og:title" content="Pokemon List" key="title" />
+      </Head>
+      <Header title="Pokemon List" />
+      <StyledListWrapper>
+        {pokemons.map(({ id, name, image }) => (<PokemonListItem key={id} detailUrl={`/pokemons/${name}`} name={name} image={image} />))}
+      </StyledListWrapper>
+      {loading && <LoadingWrapper>Loading pokemons...</LoadingWrapper>}
+      {(!loading && pokemons.length < count) && <LoadMoreButton onClick={loadPokemon}>Load More</LoadMoreButton>}
+    </PageWrapper>
   )
 }
 

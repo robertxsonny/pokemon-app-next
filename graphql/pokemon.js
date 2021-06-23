@@ -22,6 +22,8 @@ export const getPokemonByNameQuery = gql`
     pokemon(name: $name) {
       id
       name
+      height
+      weight
       sprites {
         front_default
       }
