@@ -29,7 +29,7 @@ const ModalContent = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  [xs.max]: {
+  [xs.down]: {
     margin: 24
   }
 })

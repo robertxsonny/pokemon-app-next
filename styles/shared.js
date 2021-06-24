@@ -1,5 +1,13 @@
 import styled from '@emotion/styled';
-import { md, sm, xs } from './breakpoints';
+import { md, sm } from './breakpoints';
+
+export const PageTitle = styled.h1({
+  marginBottom: 0,
+  fontSize: 24,
+  [sm.down]: {
+    display: 'none'
+  }
+})
 
 export const SentenceCase = styled.span({
   textTransform: 'capitalize'
@@ -31,7 +39,7 @@ export const ListWrapper = styled.div({
   justifyContent: 'space-between',
   gap: 16,
   padding: 24,
-  [xs.max]: {
+  [sm.down]: {
     gridTemplateColumns: 'repeat(auto-fill, minmax(125px, 1fr))',
     gap: 12,
   }
@@ -41,7 +49,7 @@ export const DetailWrapper = styled.div({
   padding: 24,
   display: 'block',
   minHeight: '100%',
-  [md.min]: {
+  [md.up]: {
     display: 'grid',
     gridTemplateColumns: '300px 1fr',
     gap: 24,
@@ -54,10 +62,10 @@ export const DetailImageWrapper = styled.div({
   height: 300,
   backgroundColor: 'whitesmoke',
   position: 'relative',
-  [md.min]: {
+  [md.up]: {
     borderRadius: 6
   },
-  [sm.max]: {
+  [sm.down]: {
     width: 'calc(100% + 48px)',
     height: 200,
     margin: '-24px -24px 0',
@@ -102,7 +110,7 @@ export const CtaButton = styled.button({
   '&:active:not([disabled])': {
     backgroundColor: 'darkgreen'
   },
-  [sm.max]: {
+  [sm.down]: {
     fontSize: 14,
     padding: 12,
   }
@@ -111,7 +119,7 @@ export const CtaButton = styled.button({
 export const SmallCtaButton = styled(CtaButton)({
   fontSize: 13,
   padding: 12,
-  [sm.max]: {
+  [sm.down]: {
     fontSize: 13,
     padding: 10,
   }

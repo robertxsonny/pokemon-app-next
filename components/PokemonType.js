@@ -21,7 +21,7 @@ const typeStyle = {
   dark: css({ backgroundColor: 'black', color: 'white' }),
   fairy: css({ backgroundColor: 'pink', color: 'white' }),
   unknown: css({ backgroundColor: 'dimgray', color: 'white' }),
-  shadow: css({ backgroundColor: 'darkgray', color: 'white' }),
+  shadow: css({ backgroundColor: 'darkgray', color: 'white' })
 }
 
 const TypeLabel = styled.div(

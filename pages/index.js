@@ -20,14 +20,14 @@ const CardWrapper = styled.section({
   padding: 48,
   boxSizing: 'border-box',
   flexWrap: 'wrap',
-  [sm.max]: {
+  [sm.down]: {
     padding: '16px 24px'
   }
 })
 
 const BigEmoji = styled(Emoji)({
   fontSize: 48,
-  [sm.max]: {
+  [sm.down]: {
     fontSize: 36
   }
 })
@@ -52,7 +52,7 @@ const CardMenu = styled.a({
   '&:hover': {
     boxShadow: '0 8px 8px rgba(0, 0, 0, 0.034), 0 12px 12px rgba(0, 0, 0, 0.048)',
   },
-  [sm.max]: {
+  [sm.down]: {
     fontSize: 14,
     width: 135,
     height: 135
@@ -78,7 +78,7 @@ export default function Home() {
         <Link href="/my-pokemon" passHref>
           <CardMenu>
             <BigEmoji role="img" area-label="pokemons">💼</BigEmoji>
-            My collections
+            My collection
           </CardMenu>
         </Link>
       </CardWrapper>

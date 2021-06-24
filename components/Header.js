@@ -1,23 +1,22 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { md, sm } from '../styles/breakpoints';
+import { useBreakpoints } from '../hooks/breakpoints';
+import { sm } from '../styles/breakpoints';
+import BackButton from './BackButton';
 
-const HeaderWrapper = styled.header(
-  {
-    height: 50,
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 99,
-    display: 'flex',
-    alignItems: 'center',
-    backgroundColor: 'whitesmoke',
-    boxShadow: '0 6px 6px rgba(0, 0, 0, 0.078)'
-  },
-  ({ hideOnSm }) => hideOnSm ? { [sm.max]: { display: 'none' } } : {}
-)
+const HeaderWrapper = styled.header({
+  height: 50,
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 99,
+  display: 'flex',
+  alignItems: 'center',
+  backgroundColor: 'whitesmoke',
+  boxShadow: '0 6px 6px rgba(0, 0, 0, 0.078)'
+})
 
 const HeaderContainer = styled.div({
   width: '100%',
@@ -25,35 +24,10 @@ const HeaderContainer = styled.div({
   margin: '0 auto',
   padding: '0 24px',
   boxSizing: 'border-box',
-  fontSize: 20
-})
-
-const LargeOnlyHeaderContainer = styled(HeaderContainer)({
-  [sm.max]: {
-    display: 'none'
-  },
-  [md.min]: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  }
-})
-
-const SmallOnlyHeaderContainer = styled(HeaderContainer)({
-  [md.min]: {
-    display: 'none'
-  }
-})
-
-const LargeOnlyTitle = styled.div({
-  'h1': {
-    marginBottom: 0,
-    fontSize: 24,
-    textAlign: 'left',
-  },
-  [sm.max]: {
-    display: 'none'
-  }
+  fontSize: 20,
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center'
 })
 
 const HomeLink = styled.span({
@@ -77,8 +51,9 @@ const MenuLink = styled(HomeLink)(
   } : {})
 );
 
-const Header = ({ title, hideOnSm }) => {
+const Header = ({ mobileTitle, hideOnSm }) => {
   const router = useRouter();
+  const isSmallScreen = useBreakpoints('sm', 'down');
 
   const { pathname } = router;
 
@@ -86,22 +61,31 @@ const Header = ({ title, hideOnSm }) => {
     return pathname === path ? <MenuLink current>{title}</MenuLink> : <Link href={path} passHref><MenuLink>{title}</MenuLink></Link>
   }
 
+  if (hideOnSm && isSmallScreen) {
+    return null;
+  }
+
   return (
-    <>
-      <HeaderWrapper hideOnSm={hideOnSm}>
-        <LargeOnlyHeaderContainer>
-          <Link href="/" passHref>
-            <HomeLink>Pokemon List App</HomeLink>
-          </Link>
-          <RightLinkWrapper>
-            {renderRightMenu('/pokemons', 'All Pokemons')}
-            {renderRightMenu('/my-pokemon', 'My collections')}
-          </RightLinkWrapper>
-        </LargeOnlyHeaderContainer>
-        {!hideOnSm && <SmallOnlyHeaderContainer>{title}</SmallOnlyHeaderContainer>}
-      </HeaderWrapper>
-      {!hideOnSm && <LargeOnlyTitle><h1>{title}</h1></LargeOnlyTitle>}
-    </>
+    <HeaderWrapper>
+      <HeaderContainer>
+        {isSmallScreen ? (
+          <div>
+            <BackButton />
+            {mobileTitle}
+          </div>
+        ) : (
+          <>
+            <Link href="/" passHref>
+              <HomeLink>Pokemon List App</HomeLink>
+            </Link>
+            <RightLinkWrapper>
+              {renderRightMenu('/pokemons', 'All Pokemons')}
+              {renderRightMenu('/my-pokemon', 'My Collections')}
+            </RightLinkWrapper>
+          </>
+        )}
+      </HeaderContainer>
+    </HeaderWrapper>
   )
 }
 

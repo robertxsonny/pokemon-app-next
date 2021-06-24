@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import CatchPokemon from '../../components/CatchPokemon';
 import Header from '../../components/Header';
 import PokemonDetail from '../../components/PokemonDetail';
+import BackButton from '../../components/BackButton';
 import { sm } from '../../styles/breakpoints';
 import { CtaButton, DetailImageWrapper, DetailWrapper } from '../../styles/shared';
 
@@ -18,7 +19,7 @@ const CatchButtonWrapper = styled.div({
   padding: '24px 0',
   background: 'linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 15%)',
   width: '100%',
-  [sm.max]: {
+  [sm.down]: {
     padding: 24,
     boxSizing: 'border-box',
     position: 'fixed',
@@ -68,7 +69,8 @@ const PokemonDetailPage = ({ pokemon }) => {
         <title>{name} - Pokemon List</title>
         <meta property="og:title" content={`${name} - Pokemon List`} key="title" />
       </Head>
-      <Header title="Pokemon List" hideOnSm />
+      <BackButton fixed />
+      <Header hideOnSm />
       <section>
         <DetailImageWrapper>
           <Image src={sprites.front_default} alt={name} layout="fill" objectFit="contain" />

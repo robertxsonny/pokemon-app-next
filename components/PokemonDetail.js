@@ -15,12 +15,12 @@ const DetailHeader = styled.div({
   'h1, h3': {
     margin: 0
   },
-  [sm.max]: {
+  [sm.down]: {
     position: 'sticky',
     top: 0,
     padding: '12px 0'
   },
-  [md.min]: {
+  [md.up]: {
     display: 'flex',
     alignItems: 'flex-end',
     justifyContent: 'flex-start'
@@ -28,7 +28,7 @@ const DetailHeader = styled.div({
 })
 
 const Title = styled(SentenceCase.withComponent('h1'))({
-  [sm.max]: {
+  [sm.down]: {
     textAlign: 'center',
     fontSize: 24,
     'small': {
@@ -36,7 +36,7 @@ const Title = styled(SentenceCase.withComponent('h1'))({
       fontSize: 14
     }
   },
-  [md.min]: {
+  [md.up]: {
     paddingRight: 16,
     'small': {
       marginLeft: 8,
@@ -61,7 +61,7 @@ const SectionTitle = styled.h2({
 
 const SmallCardWrapper = styled(CenteredFlex)({
   margin: '16px -8px',
-  [md.min]: {
+  [md.up]: {
     justifyContent: 'flex-start'
   }
 })
@@ -83,7 +83,7 @@ const SmallCard = styled.div({
     marginBottom: 8,
     fontSize: 28
   },
-  [sm.max]: {
+  [sm.down]: {
     width: 80,
     height: 60,
     margin: 4,

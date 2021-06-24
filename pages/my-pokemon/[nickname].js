@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import ReleasePokemon from '../../components/ReleasePokemon'
 import Header from '../../components/Header';
 import PokemonDetail from '../../components/PokemonDetail';
+import BackButton from '../../components/BackButton';
 import { CtaButton, DetailImageWrapper, DetailWrapper, LoadingWrapper } from '../../styles/shared';
 import { sm } from '../../styles/breakpoints';
 
@@ -18,7 +19,7 @@ const ReleaseButtonWrapper = styled.div({
   padding: '24px 0',
   background: 'linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 15%)',
   width: '100%',
-  [sm.max]: {
+  [sm.down]: {
     padding: 24,
     boxSizing: 'border-box',
     position: 'fixed',
@@ -111,7 +112,8 @@ const MyPokemonDetailPage = ({ }) => {
         <title>{nickname} - My Pokemon Collection</title>
         <meta property="og:title" content={`${nickname} - My Pokemon Collection`} key="title" />
       </Head>
-      <Header title="My Pokemon Collection" hideOnSm />
+      <Header hideOnSm />
+      <BackButton fixed />
       {pageContent}
     </DetailWrapper>
   )

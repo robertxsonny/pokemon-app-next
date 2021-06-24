@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 import PokemonListItem from '../../components/PokemonListItem';
 import Header from '../../components/Header';
-import { ListWrapper, LoadingWrapper } from '../../styles/shared';
+import { ListWrapper, LoadingWrapper, PageTitle, SentenceCase } from '../../styles/shared';
 
 import { getPokemonByNameQuery } from '../../graphql/pokemon';
 import { useMyPokemons } from '../../hooks/my-pokemon';
@@ -74,8 +74,16 @@ const MyPokemonsPage = () => {
       <StyledListWrapper>
         {Object.keys(caughtPokemons).map((nickname) => {
           const originalName = caughtPokemons[nickname];
-          const { id, sprites = {} } = pokemonInfo[originalName] || {};
-          return (<PokemonListItem key={id} name={nickname} detailUrl={`/my-pokemon/${nickname}`} image={sprites.front_default} />);
+          const { id, name, sprites = {} } = pokemonInfo[originalName] || {};
+          return (
+            <PokemonListItem
+              key={id}
+              name={nickname}
+              subtitle={<SentenceCase>({name})</SentenceCase>}
+              detailUrl={`/my-pokemon/${nickname}`}
+              image={sprites.front_default}
+            />
+          );
         })}
       </StyledListWrapper>
     )
@@ -94,10 +102,11 @@ const MyPokemonsPage = () => {
   return (
     <PageWrapper>
       <Head>
-        <title>My Pokemon Collection</title>
-        <meta property="og:title" content="My Pokemon Collection" key="title" />
+        <title>My Pokemons Collection</title>
+        <meta property="og:title" content="My Pokemons Collection" key="title" />
       </Head>
-      <Header title="My Pokemon Collection" />
+      <Header mobileTitle="My Collection" />
+      <PageTitle>My Pokemon Collection</PageTitle>
       {pageContent}
     </PageWrapper>
 
