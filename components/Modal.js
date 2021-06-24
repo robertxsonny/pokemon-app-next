@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { xs } from '../styles/breakpoints';
+import { sm } from '../styles/breakpoints';
 import { Emoji } from '../styles/shared';
 
 const ModalContainer = styled.div({
@@ -29,7 +29,7 @@ const ModalContent = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  [xs.down]: {
+  [sm.down]: {
     margin: 24
   }
 })

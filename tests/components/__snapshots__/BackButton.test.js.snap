@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton component Should not render back button on large 1`] = `<div />`;
+
+exports[`BackButton component Should render fixed back button 1`] = `
+<div>
+  <button
+    class="css-1iz9xu8-TextButton-LargeTextButton e12p61ez0"
+  >
+    &lt;
+  </button>
+</div>
+`;
+
+exports[`BackButton component Should render normal back button 1`] = `
+<div>
+  <button
+    class="css-1a6de82-TextButton-LargeTextButton e12p61ez0"
+  >
+    &lt;
+  </button>
+</div>
+`;

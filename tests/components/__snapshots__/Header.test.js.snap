@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Should not render header in small screen if is set to hide on small screen 1`] = `<div />`;
+
+exports[`Header component Should render all components in large screen 1`] = `
+<div>
+  <header
+    class="css-r752xb-HeaderWrapper e1hd5i84"
+  >
+    <div
+      class="css-19mqaid-HeaderContainer e1hd5i83"
+    >
+      <span
+        class="css-o7n0c5-HomeLink e1hd5i82"
+        href="/"
+      >
+        Pokemon List App
+      </span>
+      <div
+        class="css-18c0i80-RightLinkWrapper e1hd5i81"
+      >
+        <span
+          class="css-16f59f8-HomeLink-MenuLink e1hd5i80"
+          href="/pokemons"
+        >
+          All Pokemons
+        </span>
+        <span
+          class="css-16f59f8-HomeLink-MenuLink e1hd5i80"
+          href="/my-pokemon"
+        >
+          My Collections
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header component Should render header menu in active state if the current page matches with the link 1`] = `
+<div>
+  <header
+    class="css-r752xb-HeaderWrapper e1hd5i84"
+  >
+    <div
+      class="css-19mqaid-HeaderContainer e1hd5i83"
+    >
+      <span
+        class="css-o7n0c5-HomeLink e1hd5i82"
+        href="/"
+      >
+        Pokemon List App
+      </span>
+      <div
+        class="css-18c0i80-RightLinkWrapper e1hd5i81"
+      >
+        <span
+          class="css-or14iv-HomeLink-MenuLink e1hd5i80"
+        >
+          All Pokemons
+        </span>
+        <span
+          class="css-16f59f8-HomeLink-MenuLink e1hd5i80"
+          href="/my-pokemon"
+        >
+          My Collections
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header component Should render header menu in active state if the current page matches with the link 2`] = `
+<div>
+  <header
+    class="css-r752xb-HeaderWrapper e1hd5i84"
+  >
+    <div
+      class="css-19mqaid-HeaderContainer e1hd5i83"
+    >
+      <span
+        class="css-o7n0c5-HomeLink e1hd5i82"
+        href="/"
+      >
+        Pokemon List App
+      </span>
+      <div
+        class="css-18c0i80-RightLinkWrapper e1hd5i81"
+      >
+        <span
+          class="css-16f59f8-HomeLink-MenuLink e1hd5i80"
+          href="/pokemons"
+        >
+          All Pokemons
+        </span>
+        <span
+          class="css-or14iv-HomeLink-MenuLink e1hd5i80"
+        >
+          My Collections
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header component Should render title and back button in small screen 1`] = `
+<div>
+  <header
+    class="css-r752xb-HeaderWrapper e1hd5i84"
+  >
+    <div
+      class="css-19mqaid-HeaderContainer e1hd5i83"
+    >
+      <div>
+        Mobile
+      </div>
+    </div>
+  </header>
+</div>
+`;

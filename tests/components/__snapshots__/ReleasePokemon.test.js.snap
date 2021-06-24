@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReleasePokemon component Should not render anything if not opened 1`] = `<div />`;
+
+exports[`ReleasePokemon component Should render confirmation screen at first 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        ⚠️
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Are you sure you want to release 
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+        ?
+      </h3>
+      <button
+        class="css-11qewao-CtaButton-SmallCtaButton-DangerCtaButton ejb9ufw0"
+      >
+        Yes, release from collection
+      </button>
+      <button
+        class="css-hqh9ye-TextButton-DangerTextButton ejb9ufw1"
+      >
+        No, cancel
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ReleasePokemon component Should render notification after confirming to release Pokemon 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        🕊️
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+         has been released
+      </h3>
+      <a
+        class="css-1jmjyid-DangerLinkButton-TextButton-DangerTextButton ejb9ufw2"
+        href="/my-pokemon"
+      >
+        Go back to my collection
+      </a>
+    </div>
+  </div>
+</div>
+`;

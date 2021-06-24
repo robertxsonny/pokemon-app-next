@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component Should not render modal if not open 1`] = `<div />`;
+
+exports[`Modal component Should render modal if open 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      Modal Content Goes Here
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal component Should render modal with emoji if open 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="Modal Title"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        😃
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Modal Title
+      </h3>
+      Modal Content Goes Here
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal component Should render modal with title if open 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Modal Title
+      </h3>
+      Modal Content Goes Here
+    </div>
+  </div>
+</div>
+`;

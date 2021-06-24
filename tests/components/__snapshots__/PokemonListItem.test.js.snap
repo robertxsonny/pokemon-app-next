@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonListItem component Should render list item component 1`] = `
+<div>
+  <a
+    class="css-mrowqa-Card e19yqeoj0"
+    href="/pikachu"
+  >
+    <div
+      class="css-1msahx6-TextWrapper e19yqeoj3"
+    >
+      <b
+        class="css-1x9t9rc-Name e19yqeoj2"
+      >
+        Pikachu
+      </b>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`PokemonListItem component Should render list item component with image 1`] = `
+<div>
+  <a
+    class="css-mrowqa-Card e19yqeoj0"
+    href="/pikachu"
+  >
+    <img
+      alt="Pikachu"
+      src="https://images.example.com/pikachu.png"
+    />
+    <div
+      class="css-1msahx6-TextWrapper e19yqeoj3"
+    >
+      <b
+        class="css-1x9t9rc-Name e19yqeoj2"
+      >
+        Pikachu
+      </b>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`PokemonListItem component Should render list item component with subtitle 1`] = `
+<div>
+  <a
+    class="css-mrowqa-Card e19yqeoj0"
+    href="/pikachu"
+  >
+    <div
+      class="css-1msahx6-TextWrapper e19yqeoj3"
+    >
+      <b
+        class="css-1x9t9rc-Name e19yqeoj2"
+      >
+        Pikachu
+      </b>
+      <span
+        class="css-1f5ct2u-Subtitle e19yqeoj1"
+      >
+        Pikachu
+      </span>
+    </div>
+  </a>
+</div>
+`;

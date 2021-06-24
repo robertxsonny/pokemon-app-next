@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useBreakpoints } from '../hooks/breakpoints';
-import { sm } from '../styles/breakpoints';
 import BackButton from './BackButton';
 
 const HeaderWrapper = styled.header({

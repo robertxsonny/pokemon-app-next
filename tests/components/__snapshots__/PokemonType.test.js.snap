@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonType component Should render each type with correct style correctly 1`] = `
+<div>
+  <div
+    class="css-48bbfv-TypeLabel-normal e5gu2840"
+    type="normal"
+  >
+    normal
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 2`] = `
+<div>
+  <div
+    class="css-1v62pcc-TypeLabel-fighting e5gu2840"
+    type="fighting"
+  >
+    fighting
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 3`] = `
+<div>
+  <div
+    class="css-3lkw53-TypeLabel-flying e5gu2840"
+    type="flying"
+  >
+    flying
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 4`] = `
+<div>
+  <div
+    class="css-15toz5f-TypeLabel-poison e5gu2840"
+    type="poison"
+  >
+    poison
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 5`] = `
+<div>
+  <div
+    class="css-14p42ca-TypeLabel-ground e5gu2840"
+    type="ground"
+  >
+    ground
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 6`] = `
+<div>
+  <div
+    class="css-1xm66j5-TypeLabel-rock e5gu2840"
+    type="rock"
+  >
+    rock
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 7`] = `
+<div>
+  <div
+    class="css-1cuhrd3-TypeLabel-bug e5gu2840"
+    type="bug"
+  >
+    bug
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 8`] = `
+<div>
+  <div
+    class="css-1k5le53-TypeLabel-ghost e5gu2840"
+    type="ghost"
+  >
+    ghost
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 9`] = `
+<div>
+  <div
+    class="css-1vdqrdm-TypeLabel-steel e5gu2840"
+    type="steel"
+  >
+    steel
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 10`] = `
+<div>
+  <div
+    class="css-3kx21e-TypeLabel-fire e5gu2840"
+    type="fire"
+  >
+    fire
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 11`] = `
+<div>
+  <div
+    class="css-za5alu-TypeLabel-water e5gu2840"
+    type="water"
+  >
+    water
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 12`] = `
+<div>
+  <div
+    class="css-1nm1npt-TypeLabel-grass e5gu2840"
+    type="grass"
+  >
+    grass
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 13`] = `
+<div>
+  <div
+    class="css-1r0vg09-TypeLabel-electric e5gu2840"
+    type="electric"
+  >
+    electric
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 14`] = `
+<div>
+  <div
+    class="css-p1sz69-TypeLabel-psychic e5gu2840"
+    type="psychic"
+  >
+    psychic
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 15`] = `
+<div>
+  <div
+    class="css-uqk9o9-TypeLabel-ice e5gu2840"
+    type="ice"
+  >
+    ice
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 16`] = `
+<div>
+  <div
+    class="css-1jhji17-TypeLabel-dragon e5gu2840"
+    type="dragon"
+  >
+    dragon
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 17`] = `
+<div>
+  <div
+    class="css-1tw4qy2-TypeLabel-dark e5gu2840"
+    type="dark"
+  >
+    dark
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 18`] = `
+<div>
+  <div
+    class="css-pm6d5l-TypeLabel-fairy e5gu2840"
+    type="fairy"
+  >
+    fairy
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 19`] = `
+<div>
+  <div
+    class="css-h5brzk-TypeLabel-unknown e5gu2840"
+    type="unknown"
+  >
+    unknown
+  </div>
+</div>
+`;
+
+exports[`PokemonType component Should render each type with correct style correctly 20`] = `
+<div>
+  <div
+    class="css-1t2bf0i-TypeLabel-shadow e5gu2840"
+    type="shadow"
+  >
+    shadow
+  </div>
+</div>
+`;

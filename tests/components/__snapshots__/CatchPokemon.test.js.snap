@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatchPokemon failed state Should show error dialog if catching Pokemon is failed 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        😞
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Oops, failed to catch 
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+        !
+      </h3>
+      <button
+        class="css-11qewao-CtaButton-SmallCtaButton-DangerCtaButton ejgy2rx1"
+      >
+        Try again
+      </button>
+      <button
+        class="css-hqh9ye-TextButton-DangerTextButton ejgy2rx2"
+      >
+        Go back
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CatchPokemon failed state Should show error dialog if catching Pokemon is failed 2`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        ⏳
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Trying to catch 
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+      </h3>
+      <p>
+        Please wait...
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CatchPokemon loading state Should initially render loading screen 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        ⏳
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        Trying to catch 
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+      </h3>
+      <p>
+        Please wait...
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CatchPokemon loading state Should not render anything if not opened 1`] = `<div />`;
+
+exports[`CatchPokemon success state Should give prefilled unique nickname 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        👍
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          squirtle
+        </span>
+         was caught!
+      </h3>
+      <p>
+        Give it a unique nickname to save it to your collection
+      </p>
+      <input
+        class="css-9ab6cq-TextInput ejgy2rx0"
+        value="squirtle1"
+      />
+      <button
+        class="css-v2dbck-CtaButton-SmallCtaButton e55skjj0"
+      >
+        Save to my collection
+      </button>
+      <button
+        class="css-qqk8k3-TextButton-SecondaryTextButton ejgy2rx3"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CatchPokemon success state Should render saving form once it allows to catch 1`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        👍
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+         was caught!
+      </h3>
+      <p>
+        Give it a unique nickname to save it to your collection
+      </p>
+      <input
+        class="css-9ab6cq-TextInput ejgy2rx0"
+        value="pikachu"
+      />
+      <button
+        class="css-v2dbck-CtaButton-SmallCtaButton e55skjj0"
+      >
+        Save to my collection
+      </button>
+      <button
+        class="css-qqk8k3-TextButton-SecondaryTextButton ejgy2rx3"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CatchPokemon success state Should render saving form once it allows to catch 2`] = `
+<div>
+  <div
+    class="css-1f6dfq1-ModalContainer e2hvhql2"
+  >
+    <div
+      class="css-pujlrx-ModalContent e2hvhql1"
+    >
+      <span
+        aria-label="[object Object]"
+        class="css-1k4msm7-Emoji e55skjj7"
+        role="img"
+      >
+        ✅
+      </span>
+      <h3
+        class="css-1f0is5a-ModalTitle e2hvhql0"
+      >
+        <span
+          class="css-8aj3s4-SentenceCase e55skjj8"
+        >
+          pikachu
+        </span>
+         has been added to your collection
+      </h3>
+      <a
+        class="css-crp5p1-SecondaryLinkButton-TextButton-SecondaryTextButton ejgy2rx4"
+        href="/my-pokemon"
+      >
+        View my collection
+      </a>
+      <button
+        class="css-qqk8k3-TextButton-SecondaryTextButton ejgy2rx3"
+      >
+        Go back
+      </button>
+    </div>
+  </div>
+</div>
+`;

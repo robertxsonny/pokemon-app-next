@@ -44,7 +44,7 @@ const TextInput = styled.input({
   }
 })
 
-const CatchPokemon = ({ open, name, onCaught, onClose }) => {
+const CatchPokemon = ({ open, name, onClose }) => {
   const { hasPokemonWithNickname, catchPokemon } = useMyPokemons();
   const [nickname, setNickname] = useState();
   const [canCatch, setCanCatch] = useState(null);
@@ -82,9 +82,6 @@ const CatchPokemon = ({ open, name, onCaught, onClose }) => {
   const onCatchPokemon = () => {
     catchPokemon(name, nickname);
     setCaught(true);
-    if (onCaught) {
-      onCaught();
-    }
   }
 
   const nameWihSentenceCase = <SentenceCase>{name}</SentenceCase>

@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonMoves component Should render 12 moves partially at first if more than 12 items 1`] = `
+<div>
+  <div
+    class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+  >
+    <div
+      class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+    >
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pound
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        karate chop
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        double slap
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        comet punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        mega punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pay day
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        fire punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        ice punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        thunder punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        scratch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        vise grip
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        guillotine
+      </div>
+    </div>
+    <button
+      class="css-cu5g8q-TextButton-ShowMoreLessButton e1mi334c0"
+    >
+      Show all 
+      20
+       moves
+    </button>
+  </div>
+</div>
+`;
+
+exports[`PokemonMoves component Should render 12 moves partially at first if more than 12 items 2`] = `
+<div>
+  <div
+    class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+  >
+    <div
+      class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+    >
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pound
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        karate chop
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        double slap
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        comet punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        mega punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pay day
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        fire punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        ice punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        thunder punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        scratch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        vise grip
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        guillotine
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        razor wind
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        swords dance
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        cut
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        gust
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        wing attack
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        whirlwind
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        fly
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        bind
+      </div>
+    </div>
+    <button
+      class="css-cu5g8q-TextButton-ShowMoreLessButton e1mi334c0"
+    >
+      Show only first 12 moves
+    </button>
+  </div>
+</div>
+`;
+
+exports[`PokemonMoves component Should render 12 moves partially at first if more than 12 items 3`] = `
+<div>
+  <div
+    class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+  >
+    <div
+      class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+    >
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pound
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        karate chop
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        double slap
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        comet punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        mega punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pay day
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        fire punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        ice punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        thunder punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        scratch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        vise grip
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        guillotine
+      </div>
+    </div>
+    <button
+      class="css-cu5g8q-TextButton-ShowMoreLessButton e1mi334c0"
+    >
+      Show all 
+      20
+       moves
+    </button>
+  </div>
+</div>
+`;
+
+exports[`PokemonMoves component Should render all moves if less than 12 items 1`] = `
+<div>
+  <div
+    class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+  >
+    <div
+      class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+    >
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pound
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        karate chop
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        double slap
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        comet punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        mega punch
+      </div>
+      <div
+        class="css-1ewczkj-MoveItem e1mi334c1"
+      >
+        pay day
+      </div>
+    </div>
+  </div>
+</div>
+`;

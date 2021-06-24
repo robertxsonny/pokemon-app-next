@@ -55,7 +55,7 @@ const Card = styled.a({
 })
 
 const PokemonListItem = ({ name, subtitle, image, detailUrl }) => (
-  <Link href={detailUrl} passHref>
+  <Link href={detailUrl || '/'} passHref>
     <Card>
       {image && <Image src={image} alt={name} layout="fill" objectFit="contain" />}
       <TextWrapper>

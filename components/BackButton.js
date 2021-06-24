@@ -22,7 +22,7 @@ const BackButton = ({ fixed }) => {
   const { back } = useRouter();
   const isSmallScreen = useBreakpoints('sm', 'down');
 
-  return isSmallScreen && <LargeTextButton fixed={fixed} onClick={back}>&lt;</LargeTextButton>;
+  return isSmallScreen ? <LargeTextButton fixed={fixed} onClick={back}>&lt;</LargeTextButton> : null;
 }
 
 export default BackButton;
