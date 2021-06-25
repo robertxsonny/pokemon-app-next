@@ -36,10 +36,7 @@ export const getServerSideProps = async ({ params: { name } }) => {
   if (name) {
     try {
       const { data } = await client.query({ query: getPokemonByNameQuery, variables: { name } });
-
-      if (data && data.pokemon) {
-        pokemon = data.pokemon
-      }
+      pokemon = (data && data.pokemon) || null;
     } catch (e) {
       pokemon = null;
     }

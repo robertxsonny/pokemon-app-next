@@ -33,7 +33,7 @@ jest
     useBreakpoints: jest.fn()
   }))
   .mock('../../../apollo-client', () => ({
-    query: jest.fn(() => Promise.resolve({}))
+    query: jest.fn(() => Promise.resolve({ data: { pokemon } }))
   }))
 
 describe('PokemonDetailPage', () => {
@@ -63,27 +63,29 @@ describe('PokemonDetailPage', () => {
 })
 
 describe('getServerSideProps', () => {
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+
   test('Should get pokemon from API and return it as props', async () => {
-    client.query.mockResolvedValueOnce({ data: { pokemon } });
     const { props } = await getServerSideProps({ params: { name: 'pikachu' } });
     expect(props.pokemon).toEqual(pokemon);
   });
 
   test('Should return empty pokemon if name is missing', async () => {
-    client.query.mockResolvedValueOnce({ data: { pokemon } });
     const { props } = await getServerSideProps({ params: { name: '' } });
     expect(props.pokemon).toBeFalsy();
   });
 
   test('Should return empty pokemon if API does not return anything', async () => {
-    client.query.mockResolvedValueOnce(null);
-    const { props } = await getServerSideProps({ params: { name: '' } });
+    client.query.mockResolvedValueOnce({ });
+    const { props } = await getServerSideProps({ params: { name: 'pikachu' } });
     expect(props.pokemon).toBeFalsy();
   });
 
   test('Should return empty pokemon if API returns error', async () => {
     client.query.mockRejectedValueOnce();
-    const { props } = await getServerSideProps({ params: { name: '' } });
+    const { props } = await getServerSideProps({ params: { name: 'pikachu' } });
     expect(props.pokemon).toBeFalsy();
   });
 })
