@@ -7,6 +7,7 @@ exports[`CatchPokemon failed state Should show error dialog if catching Pokemon 
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -48,6 +49,7 @@ exports[`CatchPokemon failed state Should show error dialog if catching Pokemon 
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -81,6 +83,7 @@ exports[`CatchPokemon loading state Should initially render loading screen 1`] =
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -116,6 +119,7 @@ exports[`CatchPokemon success state Should give prefilled unique nickname 1`] = 
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -163,6 +167,7 @@ exports[`CatchPokemon success state Should render saving form once it allows to 
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -210,6 +215,7 @@ exports[`CatchPokemon success state Should render saving form once it allows to 
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"

@@ -23,7 +23,11 @@ const StyledListWrapper = styled(ListWrapper)({
   alignSelf: 'stretch'
 })
 
-const EmptyWrapper = LoadingWrapper.withComponent('p');
+const EmptyWrapper = styled(LoadingWrapper.withComponent('p'))({
+  display: 'inline',
+  padding: 24,
+  boxSizing: 'border-box'
+});
 
 const LinkInWrapper = styled.span({
   color: 'black',
@@ -71,7 +75,7 @@ const MyPokemonsPage = () => {
     pageContent = <LoadingWrapper empty>Loading your pokemon collection...</LoadingWrapper>
   } else if (caughtPokemons && Object.keys(caughtPokemons).length > 0) {
     pageContent = (
-      <StyledListWrapper>
+      <StyledListWrapper data-testid="my-pokemon-list">
         {Object.keys(caughtPokemons).map((nickname) => {
           const originalName = caughtPokemons[nickname];
           const { id, name, sprites = {} } = pokemonInfo[originalName] || {};
@@ -91,8 +95,9 @@ const MyPokemonsPage = () => {
     pageContent = (
       <>
         <EmptyWrapper empty>
-          You haven&apos;t caught any Pokemons yet.&nbsp;
-          <Link href="/pokemons" passHref><LinkInWrapper>Go to all Pokemon list</LinkInWrapper></Link>
+          You haven&apos;t caught any Pokemons yet.<br />
+          Go to&nbsp;
+          <Link href="/pokemons" passHref><LinkInWrapper>all Pokemon list</LinkInWrapper></Link>
           &nbsp;and catch some of them!
         </EmptyWrapper>
       </>

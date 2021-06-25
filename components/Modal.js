@@ -47,7 +47,7 @@ const Modal = ({ children, open, title, emoji }) => {
 
   return (
     <ModalContainer>
-      <ModalContent>
+      <ModalContent data-testid="modal">
         {emoji && <Emoji role="img" aria-label={title}>{emoji}</Emoji>}
         {title && <ModalTitle>{title}</ModalTitle>}
         {children}

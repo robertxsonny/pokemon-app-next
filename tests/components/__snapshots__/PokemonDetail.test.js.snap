@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetailItem component Should render pokemon detail 1`] = `
+<div>
+  <section
+    class="css-56c5k9-DetailContent ert5fdg6"
+  >
+    <div
+      class="css-m4xjt3-DetailHeader ert5fdg5"
+    >
+      <h1
+        class="css-1buz0g5-Title-SentenceCase-Title ert5fdg4"
+      >
+        Pikachu
+      </h1>
+      <div
+        class="css-8evzty-CenteredFlex ert5fdg3"
+      >
+        <div
+          class="css-1r0vg09-TypeLabel-electric e5gu2840"
+          type="electric"
+        >
+          electric
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1gn2694-CenteredFlex-SmallCardWrapper ert5fdg1"
+    />
+    <div>
+      <h2
+        class="css-5n37sm-SectionTitle ert5fdg2"
+      >
+        Moves
+      </h2>
+      <div
+        class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+      >
+        <div
+          class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+        >
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            pound
+          </div>
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            karate chop
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`PokemonDetailItem component Should render pokemon detail with height and weight 1`] = `
+<div>
+  <section
+    class="css-56c5k9-DetailContent ert5fdg6"
+  >
+    <div
+      class="css-m4xjt3-DetailHeader ert5fdg5"
+    >
+      <h1
+        class="css-1buz0g5-Title-SentenceCase-Title ert5fdg4"
+      >
+        Pikachu
+      </h1>
+      <div
+        class="css-8evzty-CenteredFlex ert5fdg3"
+      >
+        <div
+          class="css-1r0vg09-TypeLabel-electric e5gu2840"
+          type="electric"
+        >
+          electric
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1gn2694-CenteredFlex-SmallCardWrapper ert5fdg1"
+    >
+      <div
+        class="css-2y01tc-SmallCard ert5fdg0"
+      >
+        <h3>
+          4
+        </h3>
+        Height (in)
+      </div>
+      <div
+        class="css-2y01tc-SmallCard ert5fdg0"
+      >
+        <h3>
+          600
+        </h3>
+        Weight (lbs)
+      </div>
+    </div>
+    <div>
+      <h2
+        class="css-5n37sm-SectionTitle ert5fdg2"
+      >
+        Moves
+      </h2>
+      <div
+        class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+      >
+        <div
+          class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+        >
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            pound
+          </div>
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            karate chop
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`PokemonDetailItem component Should render pokemon detail with nickname 1`] = `
+<div>
+  <section
+    class="css-56c5k9-DetailContent ert5fdg6"
+  >
+    <div
+      class="css-m4xjt3-DetailHeader ert5fdg5"
+    >
+      <h1
+        class="css-1buz0g5-Title-SentenceCase-Title ert5fdg4"
+      >
+        Pikapika
+        <small>
+          (
+          Pikachu
+          )
+        </small>
+      </h1>
+      <div
+        class="css-8evzty-CenteredFlex ert5fdg3"
+      >
+        <div
+          class="css-1r0vg09-TypeLabel-electric e5gu2840"
+          type="electric"
+        >
+          electric
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1gn2694-CenteredFlex-SmallCardWrapper ert5fdg1"
+    />
+    <div>
+      <h2
+        class="css-5n37sm-SectionTitle ert5fdg2"
+      >
+        Moves
+      </h2>
+      <div
+        class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+      >
+        <div
+          class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+        >
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            pound
+          </div>
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            karate chop
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`PokemonDetailItem component Should render pokemon detail with number of collected pokemons 1`] = `
+<div>
+  <section
+    class="css-56c5k9-DetailContent ert5fdg6"
+  >
+    <div
+      class="css-m4xjt3-DetailHeader ert5fdg5"
+    >
+      <h1
+        class="css-1buz0g5-Title-SentenceCase-Title ert5fdg4"
+      >
+        Pikachu
+      </h1>
+      <div
+        class="css-8evzty-CenteredFlex ert5fdg3"
+      >
+        <div
+          class="css-1r0vg09-TypeLabel-electric e5gu2840"
+          type="electric"
+        >
+          electric
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1gn2694-CenteredFlex-SmallCardWrapper ert5fdg1"
+    >
+      <div
+        class="css-2y01tc-SmallCard ert5fdg0"
+      >
+        <h3>
+          4
+        </h3>
+        Height (in)
+      </div>
+      <div
+        class="css-2y01tc-SmallCard ert5fdg0"
+      >
+        <h3>
+          600
+        </h3>
+        Weight (lbs)
+      </div>
+      <div
+        class="css-2y01tc-SmallCard ert5fdg0"
+      >
+        <h3>
+          2
+        </h3>
+        In Collection
+      </div>
+    </div>
+    <div>
+      <h2
+        class="css-5n37sm-SectionTitle ert5fdg2"
+      >
+        Moves
+      </h2>
+      <div
+        class="css-1oxeyy9-MoveItemsOuter e1mi334c3"
+      >
+        <div
+          class="css-1nvhei2-MoveItemsWrapper e1mi334c2"
+        >
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            pound
+          </div>
+          <div
+            class="css-1ewczkj-MoveItem e1mi334c1"
+          >
+            karate chop
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

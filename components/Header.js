@@ -65,7 +65,7 @@ const Header = ({ mobileTitle, hideOnSm }) => {
   }
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper data-testid="header">
       <HeaderContainer>
         {isSmallScreen ? (
           <div>

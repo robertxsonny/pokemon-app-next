@@ -69,11 +69,12 @@ const MyPokemonDetailPage = ({ }) => {
           throw new Error('Pokemon not found')
         }
 
-        setPokemon(data.pokemon);
+        setPokemon(data.pokemon)
         setLoading(false);
 
       } catch (e) {
         setPokemon(null);
+        setLoading(false);
       }
     }
 

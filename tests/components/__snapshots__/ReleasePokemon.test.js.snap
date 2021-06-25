@@ -9,6 +9,7 @@ exports[`ReleasePokemon component Should render confirmation screen at first 1`]
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"
@@ -50,6 +51,7 @@ exports[`ReleasePokemon component Should render notification after confirming to
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="[object Object]"

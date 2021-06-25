@@ -63,11 +63,19 @@ const PokemonsPage = () => {
       <Header mobileTitle="All Pokemons" />
       <PageTitle>All Pokemons List</PageTitle>
       {(pokemons.length > 0) && (
-        <StyledListWrapper>
+        <StyledListWrapper data-testid="pokemon-list" >
           {pokemons.map(
             ({ id, name, image }) => {
               const ownedCount = caughtNames.filter((caughtName) => caughtName === name).length;
-              return (<PokemonListItem key={id} detailUrl={`/pokemons/${name}`} name={name} subtitle={`${ownedCount} owned`} image={image} />)
+              return (
+                <PokemonListItem
+                  key={id}
+                  detailUrl={`/pokemons/${name}`}
+                  name={name}
+                  subtitle={`${ownedCount} owned`}
+                  image={image}
+                />
+              )
             }
           )}
         </StyledListWrapper>

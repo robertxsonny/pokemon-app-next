@@ -9,6 +9,7 @@ exports[`Modal component Should render modal if open 1`] = `
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       Modal Content Goes Here
     </div>
@@ -23,6 +24,7 @@ exports[`Modal component Should render modal with emoji if open 1`] = `
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <span
         aria-label="Modal Title"
@@ -49,6 +51,7 @@ exports[`Modal component Should render modal with title if open 1`] = `
   >
     <div
       class="css-pujlrx-ModalContent e2hvhql1"
+      data-testid="modal"
     >
       <h3
         class="css-1f0is5a-ModalTitle e2hvhql0"

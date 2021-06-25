@@ -12,8 +12,8 @@ import { sm } from '../../styles/breakpoints';
 import { CtaButton, DetailImageWrapper, DetailWrapper } from '../../styles/shared';
 
 import { getPokemonByNameQuery } from '../../graphql/pokemon';
-import client from '../../apollo-client';
 import { useMyPokemons } from '../../hooks/my-pokemon';
+import client from '../../apollo-client';
 
 const CatchButtonWrapper = styled.div({
   padding: '24px 0',
